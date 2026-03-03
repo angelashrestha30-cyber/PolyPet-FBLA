@@ -12,56 +12,66 @@ body {
   min-height: 100vh;
 }
 
+/* NAVIGATION */
+
 nav {
   background: white;
-  padding: 18px 50px;
+  padding: 18px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 nav .logo {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 nav .menu a {
-  margin-left: 25px;
+  margin-left: 30px;
   text-decoration: none;
   font-weight: 600;
   color: #333;
 }
 
-.container {
-  padding: 40px 60px;
+nav .menu a:hover {
+  color: #ff6b6b;
 }
 
-/* DASHBOARD LAYOUT */
+/* CONTAINER */
+
+.container {
+  padding: 50px 80px;
+}
+
+/* DASHBOARD GRID */
 
 .dashboard {
   display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 40px;
-  align-items: start;
+  grid-template-columns: 320px 1fr;
+  gap: 50px;
 }
+
+/* PET CARD */
 
 .pet-card {
   background: #f8bdbd;
-  padding: 20px;
-  border-radius: 20px;
+  padding: 25px;
+  border-radius: 25px;
   text-align: center;
-  position: relative;
 }
 
 .pet-card img {
-  width: 140px;
+  width: 150px;
+  margin: 15px 0;
 }
 
 .level-bar {
   background: #eee;
   height: 12px;
   border-radius: 10px;
-  margin: 8px 0;
+  margin: 8px 0 15px;
   overflow: hidden;
 }
 
@@ -73,12 +83,11 @@ nav .menu a {
 }
 
 .pet-card button {
-  display: block;
   width: 100%;
-  margin-top: 10px;
+  padding: 10px;
   border: none;
-  padding: 8px;
   border-radius: 8px;
+  margin-top: 10px;
   font-weight: 600;
   cursor: pointer;
 }
@@ -92,20 +101,21 @@ nav .menu a {
 .course-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+  gap: 30px;
 }
 
 .course {
   background: white;
-  padding: 20px;
-  border-radius: 15px;
+  padding: 25px;
+  border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   cursor: pointer;
   transition: 0.2s;
+  font-weight: 600;
 }
 
 .course:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
 }
 
 /* RESPONSIVE */
@@ -116,7 +126,7 @@ nav .menu a {
   }
 
   .container {
-    padding: 25px;
+    padding: 30px;
   }
 
   .course-grid {
