@@ -1,12 +1,17 @@
-// PET LEVELS
+/* =========================
+   PET LEVEL SYSTEM
+========================= */
+
 let hunger = 50;
 let hygiene = 50;
 let play = 50;
 
 function updateBars() {
-  document.getElementById("hungerFill").style.width = hunger + "%";
-  document.getElementById("hygieneFill").style.width = hygiene + "%";
-  document.getElementById("playFill").style.width = play + "%";
+  if(document.getElementById("hungerFill")) {
+    document.getElementById("hungerFill").style.width = hunger + "%";
+    document.getElementById("hygieneFill").style.width = hygiene + "%";
+    document.getElementById("playFill").style.width = play + "%";
+  }
 }
 
 function feed() {
@@ -24,18 +29,28 @@ function playTime() {
   updateBars();
 }
 
-// EDIT PET NAME
+/* =========================
+   EDIT PET NAME
+========================= */
+
 function changeName() {
   const name = prompt("Rename your pet:");
-  if(name) document.getElementById("petName").innerText = name;
+  if(name) {
+    document.getElementById("petName").innerText = name;
+  }
 }
 
-// WORLD CLOCK
-function addClock() {
-  const zone = prompt("Enter timezone (ex: Asia/Tokyo)");
-  const container = document.getElementById("clocks");
+/* =========================
+   WORLD CLOCK
+========================= */
 
+function addClock() {
+  const zone = prompt("Enter timezone (Example: Asia/Tokyo)");
+  if(!zone) return;
+
+  const container = document.getElementById("clocks");
   const div = document.createElement("div");
+
   setInterval(() => {
     div.innerText = zone + ": " +
       new Date().toLocaleTimeString("en-US", { timeZone: zone });
