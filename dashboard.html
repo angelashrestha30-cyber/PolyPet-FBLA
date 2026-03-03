@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PolyPet</title>
+  <title>PolyPet Dashboard</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/app.js" defer></script>
 </head>
@@ -19,41 +19,50 @@
 
 <div class="container dashboard">
 
-  <!-- LEFT PET PANEL -->
+  <!-- PET PANEL -->
   <div class="pet-card">
-    <h3 id="petName" onclick="changeName()">Pika</h3>
-    <img src="assets/fox.png">
+    <h3 id="petName" onclick="changeName()" style="cursor:pointer;">
+      Pika
+    </h3>
+
+    <img src="assets/fox.png" alt="Pet Fox">
 
     <p>Hunger</p>
-    <div class="level-bar"><div id="hungerFill" class="level-fill"></div></div>
+    <div class="level-bar">
+      <div id="hungerFill" class="level-fill"></div>
+    </div>
 
     <p>Hygiene</p>
-    <div class="level-bar"><div id="hygieneFill" class="level-fill"></div></div>
+    <div class="level-bar">
+      <div id="hygieneFill" class="level-fill"></div>
+    </div>
 
     <p>Playtime</p>
-    <div class="level-bar"><div id="playFill" class="level-fill"></div></div>
+    <div class="level-bar">
+      <div id="playFill" class="level-fill"></div>
+    </div>
 
     <button class="feed" onclick="feed()">Feed</button>
     <button class="wash" onclick="wash()">Wash</button>
     <button class="play" onclick="playTime()">Play</button>
   </div>
 
-  <!-- RIGHT COURSE GRID -->
+  <!-- COURSES -->
   <div class="course-grid">
-    <div class="course" onclick="location.href='practice.html'">
-      ⭐ Spanish Basics Lv:2
+    <div class="course" onclick="location.href='spanish.html'">
+      ⭐ Spanish Basics (Lv 2)
     </div>
 
-    <div class="course">
-      ⭐⭐ Kanji Practice Lv:3
+    <div class="course" onclick="location.href='kanji.html'">
+      ⭐⭐ Kanji Practice (Lv 3)
     </div>
 
-    <div class="course">
-      ⭐ French Phrases Lv:1
+    <div class="course" onclick="location.href='french.html'">
+      ⭐ French Phrases (Lv 1)
     </div>
 
-    <div class="course">
-      ⭐⭐ Grammar Quiz Lv:2
+    <div class="course" onclick="location.href='grammar.html'">
+      ⭐⭐ Grammar Quiz (Lv 2)
     </div>
   </div>
 
