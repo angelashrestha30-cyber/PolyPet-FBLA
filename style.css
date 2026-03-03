@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #f6c7c7 0%, #ffffff 100%);
+  min-height: 100vh;
+}
+
+nav {
+  background: white;
+  padding: 18px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+nav .menu a {
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+}
+
+.container {
+  padding: 40px 60px;
+}
+
+/* DASHBOARD LAYOUT */
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.pet-card {
+  background: #f8bdbd;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.pet-card img {
+  width: 140px;
+}
+
+.level-bar {
+  background: #eee;
+  height: 12px;
+  border-radius: 10px;
+  margin: 8px 0;
+  overflow: hidden;
+}
+
+.level-fill {
+  height: 100%;
+  width: 50%;
+  background: #ff6b6b;
+  transition: 0.3s;
+}
+
+.pet-card button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.feed { background: #d07cff; color: white; }
+.wash { background: #28c7c7; color: white; }
+.play { background: #ffc400; }
+
+/* COURSE GRID */
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.course {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.course:hover {
+  transform: translateY(-4px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 25px;
+  }
+
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+}
